@@ -22,5 +22,4 @@ class PhotoCell: UICollectionViewCell {
     private func configureColor() {
         self.backgroundColor = ColorGenerator.getRandomColor()
     }
-    
 }
