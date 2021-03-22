@@ -9,8 +9,18 @@ import UIKit
 
 class PhotoCell: UICollectionViewCell {
     
-    var photoCellColor: UIColor!
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        configureColor()
+    }
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        configureColor()
+    }
     
+    private func configureColor() {
+        self.backgroundColor = ColorGenerator.getRandomColor()
+    }
     
 }
