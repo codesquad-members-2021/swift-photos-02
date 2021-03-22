@@ -15,6 +15,7 @@
 		A08A17DF26086701003AA06F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A08A17DD26086701003AA06F /* LaunchScreen.storyboard */; };
 		A08A17E8260868E6003AA06F /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08A17E7260868E6003AA06F /* PhotoCell.swift */; };
 		A08A17EB26086999003AA06F /* ColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08A17EA26086999003AA06F /* ColorGenerator.swift */; };
+		FF396D9A26087EDD007DF831 /* PhotoCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF396D9926087EDD007DF831 /* PhotoCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		A08A17E026086701003AA06F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A08A17E7260868E6003AA06F /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		A08A17EA26086999003AA06F /* ColorGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGenerator.swift; sourceTree = "<group>"; };
+		FF396D9926087EDD007DF831 /* PhotoCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				A08A17D226086700003AA06F /* AppDelegate.swift */,
 				A08A17D426086700003AA06F /* SceneDelegate.swift */,
 				A08A17D626086700003AA06F /* ViewController.swift */,
+				FF396D9926087EDD007DF831 /* PhotoCollectionView.swift */,
 				A08A17D826086700003AA06F /* Main.storyboard */,
 				A08A17E7260868E6003AA06F /* PhotoCell.swift */,
 				A08A17EA26086999003AA06F /* ColorGenerator.swift */,
@@ -148,6 +151,7 @@
 				A08A17EB26086999003AA06F /* ColorGenerator.swift in Sources */,
 				A08A17D326086700003AA06F /* AppDelegate.swift in Sources */,
 				A08A17D526086700003AA06F /* SceneDelegate.swift in Sources */,
+				FF396D9A26087EDD007DF831 /* PhotoCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
