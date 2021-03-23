@@ -16,7 +16,7 @@
 		A08A17EB26086999003AA06F /* ColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08A17EA26086999003AA06F /* ColorGenerator.swift */; };
 		A0A7F2C12609927000CC2683 /* PhotoAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A7F2C02609927000CC2683 /* PhotoAppViewController.swift */; };
 		A0A7F2CA260994B200CC2683 /* PhotoCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A7F2C9260994B200CC2683 /* PhotoCollectionView.swift */; };
-		FF396DA026098782007DF831 /* PhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF396D9F26098782007DF831 /* PhotoManager.swift */; };
+		A0A7F2F62609CB7F00CC2683 /* PhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A7F2F52609CB7F00CC2683 /* PhotoManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		A08A17EA26086999003AA06F /* ColorGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGenerator.swift; sourceTree = "<group>"; };
 		A0A7F2C02609927000CC2683 /* PhotoAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAppViewController.swift; sourceTree = "<group>"; };
 		A0A7F2C9260994B200CC2683 /* PhotoCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionView.swift; sourceTree = "<group>"; };
-		FF396D9F26098782007DF831 /* PhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoManager.swift; sourceTree = "<group>"; };
+		A0A7F2F52609CB7F00CC2683 /* PhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,6 @@
 				A08A17D426086700003AA06F /* SceneDelegate.swift */,
 				A0A7F2C02609927000CC2683 /* PhotoAppViewController.swift */,
 				A08A17D826086700003AA06F /* Main.storyboard */,
-				FF396D9F26098782007DF831 /* PhotoManager.swift */,
 				A08A17DB26086701003AA06F /* Assets.xcassets */,
 				A08A17DD26086701003AA06F /* LaunchScreen.storyboard */,
 				A08A17E026086701003AA06F /* Info.plist */,
@@ -91,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				A08A17EA26086999003AA06F /* ColorGenerator.swift */,
+				A0A7F2F52609CB7F00CC2683 /* PhotoManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,8 +166,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A08A17E8260868E6003AA06F /* PhotoCell.swift in Sources */,
-				FF396DA026098782007DF831 /* PhotoManager.swift in Sources */,
 				A08A17EB26086999003AA06F /* ColorGenerator.swift in Sources */,
+				A0A7F2F62609CB7F00CC2683 /* PhotoManager.swift in Sources */,
 				A0A7F2CA260994B200CC2683 /* PhotoCollectionView.swift in Sources */,
 				A0A7F2C12609927000CC2683 /* PhotoAppViewController.swift in Sources */,
 				A08A17D326086700003AA06F /* AppDelegate.swift in Sources */,
