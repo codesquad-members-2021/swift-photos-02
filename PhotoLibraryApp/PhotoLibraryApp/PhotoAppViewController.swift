@@ -1,13 +1,13 @@
 //
-//  ViewController.swift
+//  PhotoAppViewController.swift
 //  PhotoLibraryApp
 //
-//  Created by Jun Ho JANG on 2021/03/22.
+//  Created by Jun Ho JANG on 2021/03/23.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class PhotoAppViewController: UIViewController {
     
     @IBOutlet weak var photoCollectionView: PhotoCollectionView!
     

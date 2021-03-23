@@ -25,7 +25,6 @@ class PhotoCollectionView: UICollectionView {
     }
 }
 
-
 extension PhotoCollectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 40
