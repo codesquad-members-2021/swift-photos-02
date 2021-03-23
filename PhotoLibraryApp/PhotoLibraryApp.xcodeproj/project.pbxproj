@@ -171,7 +171,6 @@
 				A08A17EB26086999003AA06F /* ColorGenerator.swift in Sources */,
 				A08A17D326086700003AA06F /* AppDelegate.swift in Sources */,
 				A08A17D526086700003AA06F /* SceneDelegate.swift in Sources */,
-				FF396D9A26087EDD007DF831 /* PhotoCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
