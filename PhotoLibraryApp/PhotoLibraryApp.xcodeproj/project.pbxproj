@@ -62,18 +62,34 @@
 		A08A17D126086700003AA06F /* PhotoLibraryApp */ = {
 			isa = PBXGroup;
 			children = (
+				FF396D9E260986DD007DF831 /* Model */,
+				FF396D9D260986BF007DF831 /* View */,
 				A08A17D226086700003AA06F /* AppDelegate.swift */,
 				A08A17D426086700003AA06F /* SceneDelegate.swift */,
 				A08A17D626086700003AA06F /* ViewController.swift */,
-				FF396D9926087EDD007DF831 /* PhotoCollectionView.swift */,
 				A08A17D826086700003AA06F /* Main.storyboard */,
-				A08A17E7260868E6003AA06F /* PhotoCell.swift */,
-				A08A17EA26086999003AA06F /* ColorGenerator.swift */,
 				A08A17DB26086701003AA06F /* Assets.xcassets */,
 				A08A17DD26086701003AA06F /* LaunchScreen.storyboard */,
 				A08A17E026086701003AA06F /* Info.plist */,
 			);
 			path = PhotoLibraryApp;
+			sourceTree = "<group>";
+		};
+		FF396D9D260986BF007DF831 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF396D9926087EDD007DF831 /* PhotoCollectionView.swift */,
+				A08A17E7260868E6003AA06F /* PhotoCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF396D9E260986DD007DF831 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A08A17EA26086999003AA06F /* ColorGenerator.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
