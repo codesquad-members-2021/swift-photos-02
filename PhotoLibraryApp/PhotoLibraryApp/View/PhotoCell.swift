@@ -8,18 +8,18 @@
 import UIKit
 
 class PhotoCell: UICollectionViewCell {
+    @IBOutlet weak var photoImageView: UIImageView!
+    var representedAssetIdentifier: String?
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        configureColor()
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configureColor()
     }
     
-    private func configureColor() {
-        self.backgroundColor = ColorGenerator.getRandomColor()
+    func configure(with image: UIImage?) {
+        photoImageView.image = image
     }
 }
