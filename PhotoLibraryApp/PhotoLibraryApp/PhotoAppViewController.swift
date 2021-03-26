@@ -21,5 +21,10 @@ class PhotoAppViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.topItem?.title = "Photos"
         PHPhotoLibrary.shared().register(photoCollectionView)
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadData(_:)), name: Notification.Name("SavePhoto"), object: nil)
+    }
+    
+    @objc func reloadData(_ notification: Notification) {
+        self.photoCollectionView.reloadData()
     }
 }
