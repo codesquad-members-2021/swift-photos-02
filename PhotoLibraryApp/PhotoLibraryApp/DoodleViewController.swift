@@ -7,26 +7,33 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
 
 class DoodleViewController: UICollectionViewController {
+    
+    var doodleDataManager = DoodleDataManager()
+    var identifier = "DoodleCell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView.dataSource = self
+        self.collectionView.delegate = self
+        self.collectionView!.register(DoodleCell.nib(), forCellWithReuseIdentifier: DoodleCell.identifier)
         configureDoodleCollectionView()
     }
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 0
-    }
-
-
+    
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return doodleDataManager.countImage()
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DoodleCell.identifier, for: indexPath) as! DoodleCell
+        
+        doodleDataManager.loadImage(indexPath: indexPath) { img in
+            DispatchQueue.main.async {
+                cell.imageView.image = img
+            }
+        }
         return cell
     }
     
@@ -36,7 +43,17 @@ class DoodleViewController: UICollectionViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(closeDoodleCollectionView))
     }
     
+    @objc func reloadData(_ notification: Notification) {
+        self.collectionView.reloadData()
+    }
+    
     @objc func closeDoodleCollectionView(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension DoodleViewController: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 110, height: 50)
     }
 }
