@@ -9,9 +9,10 @@ import UIKit
 import Photos
 
 class PhotoAppViewController: UIViewController {
-    @IBOutlet weak var photoCollectionView: PhotoCollectionView!
     
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    @IBOutlet weak var photoCollectionView: PhotoCollectionView!
 
     @IBAction func plusButtonTapped(_ sender: Any) {
         self.present(appDelegate.doodleNavigaationController, animated: true, completion: nil)
@@ -21,10 +22,14 @@ class PhotoAppViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.topItem?.title = "Photos"
         PHPhotoLibrary.shared().register(photoCollectionView)
-        NotificationCenter.default.addObserver(self, selector: #selector(reloadData(_:)), name: Notification.Name("SavePhoto"), object: nil)
+        addNotificationObserver()
     }
     
     @objc func reloadData(_ notification: Notification) {
         self.photoCollectionView.reloadData()
+    }
+    
+    func addNotificationObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadData(_:)), name: DoodleCell.savePhoto, object: nil)
     }
 }

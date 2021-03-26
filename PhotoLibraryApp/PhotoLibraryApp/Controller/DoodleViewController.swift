@@ -11,16 +11,13 @@ import UIKit
 class DoodleViewController: UICollectionViewController {
     
     var doodleDataManager = DoodleDataManager()
-    var identifier = "DoodleCell"
+
+    var selectCellIndexPath: IndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.collectionView.dataSource = self
-        self.collectionView.delegate = self
-        self.collectionView!.register(DoodleCell.nib(), forCellWithReuseIdentifier: DoodleCell.identifier)
         configureDoodleCollectionView()
     }
-    
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return doodleDataManager.countImage()
@@ -38,9 +35,12 @@ class DoodleViewController: UICollectionViewController {
     }
     
     func configureDoodleCollectionView() {
+        self.collectionView.dataSource = self
+        self.collectionView.delegate = self
         self.collectionView.backgroundColor = .darkGray
         self.title = "Dooodle Library"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(closeDoodleCollectionView))
+        self.collectionView!.register(DoodleCell.nib(), forCellWithReuseIdentifier: DoodleCell.identifier)
     }
     
     @objc func reloadData(_ notification: Notification) {

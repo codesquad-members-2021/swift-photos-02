@@ -14,8 +14,7 @@ class DoodleDataManager {
     
     init() {
         doodleImages = []
-        decodeJSON() {
-        }
+        decodeJSON(){}
     }
     func countImage() -> Int {
         return doodleImages.count

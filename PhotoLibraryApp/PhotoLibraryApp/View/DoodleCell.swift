@@ -11,6 +11,7 @@ class DoodleCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     
     static let identifier = "DoodleCell"
+    static let savePhoto = Notification.Name("SavePhoto")
     
     static let nib = {
         return UINib(nibName: identifier, bundle: nil)
@@ -22,14 +23,10 @@ class DoodleCell: UICollectionViewCell {
         self.addGestureRecognizer(gesture)
     }
     
-    func configure(with image: UIImage?) {
-        self.imageView.image = image
-    }
-    
     @objc func touchCell(_ sender: UILongPressGestureRecognizer) {
         self.becomeFirstResponder()
         let menuItem = UIMenuItem(title: "Save", action: #selector(save(_:)))
-
+    
         UIMenuController.shared.menuItems = [menuItem]
         UIMenuController.shared.showMenu(from: self, rect: self.contentView.frame)
     }
@@ -39,7 +36,7 @@ class DoodleCell: UICollectionViewCell {
             return
         }
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-        NotificationCenter.default.post(name: Notification.Name("SavePhoto"), object: self)
+        NotificationCenter.default.post(name: DoodleCell.savePhoto, object: self)
     }
     
     override var canBecomeFirstResponder: Bool {
