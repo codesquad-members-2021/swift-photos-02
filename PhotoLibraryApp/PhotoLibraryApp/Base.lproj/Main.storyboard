@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -56,7 +57,7 @@
                     <navigationItem key="navigationItem" id="VIT-bF-s0r">
                         <barButtonItem key="leftBarButtonItem" systemItem="add" id="dcP-0E-fvO">
                             <connections>
-                                <segue destination="p5M-d6-AUq" kind="show" id="snt-jE-N67"/>
+                                <action selector="plusButtonTapped:" destination="BYZ-38-t0r" id="OT4-Qz-vTP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -77,18 +78,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qfr-TM-JFy">
-                            <size key="itemSize" width="128" height="128"/>
+                            <size key="itemSize" width="110" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="QEQ-5b-J5P">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DoodleCell" id="QEQ-5b-J5P" customClass="DoodleCell" customModule="PhotoLibraryApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="110" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Qff-Md-ElG">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="110" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" name="AccentColor"/>
                                 </collectionViewCellContentView>
                             </collectionViewCell>
                         </cells>
@@ -123,6 +125,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

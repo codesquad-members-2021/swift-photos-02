@@ -21,6 +21,8 @@
 		A0A7F2C12609927000CC2683 /* PhotoAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A7F2C02609927000CC2683 /* PhotoAppViewController.swift */; };
 		A0A7F2CA260994B200CC2683 /* PhotoCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A7F2C9260994B200CC2683 /* PhotoCollectionView.swift */; };
 		A0A7F2F62609CB7F00CC2683 /* PhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A7F2F52609CB7F00CC2683 /* PhotoManager.swift */; };
+		FFAAFA83260C88220021C983 /* DoodleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAAFA81260C88220021C983 /* DoodleCell.swift */; };
+		FFAAFA84260C88220021C983 /* DoodleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFAAFA82260C88220021C983 /* DoodleCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		A0A7F2C02609927000CC2683 /* PhotoAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAppViewController.swift; sourceTree = "<group>"; };
 		A0A7F2C9260994B200CC2683 /* PhotoCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionView.swift; sourceTree = "<group>"; };
 		A0A7F2F52609CB7F00CC2683 /* PhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoManager.swift; sourceTree = "<group>"; };
+		FFAAFA81260C88220021C983 /* DoodleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleCell.swift; sourceTree = "<group>"; };
+		FFAAFA82260C88220021C983 /* DoodleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoodleCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 		FF396D9D260986BF007DF831 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FFAAFA81260C88220021C983 /* DoodleCell.swift */,
+				FFAAFA82260C88220021C983 /* DoodleCell.xib */,
 				A08A17E7260868E6003AA06F /* PhotoCell.swift */,
 				A0A7F2C9260994B200CC2683 /* PhotoCollectionView.swift */,
 			);
@@ -166,6 +172,7 @@
 			files = (
 				A08A17DF26086701003AA06F /* LaunchScreen.storyboard in Resources */,
 				A08A17DC26086701003AA06F /* Assets.xcassets in Resources */,
+				FFAAFA84260C88220021C983 /* DoodleCell.xib in Resources */,
 				A08A17DA26086700003AA06F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,6 +186,7 @@
 			files = (
 				A08A17E8260868E6003AA06F /* PhotoCell.swift in Sources */,
 				A04B246E260B15E000528E64 /* DateExtension.swift in Sources */,
+				FFAAFA83260C88220021C983 /* DoodleCell.swift in Sources */,
 				A04B246B260B142E00528E64 /* DoodleImage.swift in Sources */,
 				A04B2468260B13C000528E64 /* DataManager.swift in Sources */,
 				A08A17EB26086999003AA06F /* ColorGenerator.swift in Sources */,
