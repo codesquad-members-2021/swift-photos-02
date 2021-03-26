@@ -37,7 +37,7 @@ extension PhotoCollectionView: UICollectionViewDataSource {
         }
         let asset = PhotoManager.shared.getAsset(indexPath: indexPath)
         PhotoManager.shared.requestIamge(with: asset, thumbnailSize: CGSize(width: 100, height: 100)) { (image) in
-            cell.configure(with: image)
+            cell.photoImageView.image = image
         }
         return cell
     }

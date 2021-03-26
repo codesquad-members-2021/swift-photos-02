@@ -18,8 +18,4 @@ class PhotoCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
-    
-    func configure(with image: UIImage?) {
-        photoImageView.image = image
-    }
 }
