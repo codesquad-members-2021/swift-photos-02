@@ -9,6 +9,6 @@ import Foundation
 
 struct DoodleImage: Codable {
     let title: String
-    let imageURL: URL
-    let date: Date
+    let image: String
+    let date: String
 }
